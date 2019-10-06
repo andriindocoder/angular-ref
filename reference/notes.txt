@@ -13,3 +13,4 @@ Square bracket di angular berarti property binding : [disabled]="!allowNewServer
 $event is a super variable name you can use when using event binding.
 Directives : Instructions in the DOM
 Tanda bintang di depan, misalnya *ngIf adalah struktural direktif.
+Structural Directive vs Attribute Directive
