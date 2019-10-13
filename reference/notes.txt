@@ -8,3 +8,4 @@ selector: html-tag
 Decorator : Component(). 
 Module : Bundling all the things.
 Angular harus dikasih tau ada component apa aja melalui module.
+Template in the component is a must.
