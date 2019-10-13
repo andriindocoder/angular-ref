@@ -20,3 +20,14 @@ localReference : Any html element
     Only in the template, not in the typescript
 EVERYTHING YOU PUT BETWEEN OPENING AND CLOSING TAG OF YOUR COMPONENT IS SIMPLY REMOVED FROM THE DOM
     CHANGE THIS USING <ng-content></ng-content>
+
+Lifecycle
+    constructor()
+    ngOnChanges(changes: SimpleChanges)
+    ngOnInit()
+    ngDoCheck()
+    ngAfterContentInit()
+    ngAfterContentChecked()
+    ngAfterViewInit()
+    ngAfterViewChecked()
+    ngOnDestroy()
