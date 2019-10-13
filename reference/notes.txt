@@ -4,4 +4,11 @@ Decorator need to add
 EventEmitter
     emit();
 
-Ngasih tau app component kalau ada perubahan di cockpit component (Anaknya app component). Gunakan Output() 
+Ngasih tau app component kalau ada perubahan di cockpit component (Anaknya app component). Gunakan Output()
+
+Component communication is very important
+
+Kalau banyak chaining, ada beberapa approach.
+
+Style encapsulation
+Style only happen to corresponding component
