@@ -4,3 +4,7 @@ ng serve - index.html (the single page) - <app-root> - main.ts - app.module.ts -
 Setiap angular page terdiri atas komponen - komponen.
 Component is just a class under root component (app).
 selector: html-tag
+
+Decorator : Component(). 
+Module : Bundling all the things.
+Angular harus dikasih tau ada component apa aja melalui module.
