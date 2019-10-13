@@ -11,3 +11,4 @@ Angular harus dikasih tau ada component apa aja melalui module.
 Template in the component is a must.
 Template cuma satu, styles bisa reference lebih dari satu.
 Data Binding : Communication between ts file and html file.
+Square bracket di angular berarti property binding : [disabled]="!allowNewServer"
