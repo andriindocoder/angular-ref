@@ -13,3 +13,10 @@ Kalau banyak chaining, ada beberapa approach.
 Style encapsulation
 Style only happen to corresponding component
 ViewEncapsulation
+
+Input() Output() used to passed data around.
+Doesn't have to use two way data binding.
+localReference : Any html element
+    Only in the template, not in the typescript
+EVERYTHING YOU PUT BETWEEN OPENING AND CLOSING TAG OF YOUR COMPONENT IS SIMPLY REMOVED FROM THE DOM
+    CHANGE THIS USING <ng-content></ng-content>
