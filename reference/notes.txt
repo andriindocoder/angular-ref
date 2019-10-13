@@ -1,3 +1,7 @@
 Split component
 Decorator need to add
     @Input() : Exposing this property to the world
+EventEmitter
+    emit();
+
+Ngasih tau app component kalau ada perubahan di cockpit component (Anaknya app component). Gunakan Output() 
