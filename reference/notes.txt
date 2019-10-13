@@ -12,3 +12,4 @@ Template in the component is a must.
 Template cuma satu, styles bisa reference lebih dari satu.
 Data Binding : Communication between ts file and html file.
 Square bracket di angular berarti property binding : [disabled]="!allowNewServer"
+$event is a super variable name you can use when using event binding.
