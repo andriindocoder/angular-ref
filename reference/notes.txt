@@ -12,3 +12,4 @@ Kalau banyak chaining, ada beberapa approach.
 
 Style encapsulation
 Style only happen to corresponding component
+ViewEncapsulation
