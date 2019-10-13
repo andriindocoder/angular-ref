@@ -1,1 +1,3 @@
 Split component
+Decorator need to add
+    @Input() : Exposing this property to the world
