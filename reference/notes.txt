@@ -21,7 +21,7 @@ localReference : Any html element
 EVERYTHING YOU PUT BETWEEN OPENING AND CLOSING TAG OF YOUR COMPONENT IS SIMPLY REMOVED FROM THE DOM
     CHANGE THIS USING <ng-content></ng-content>
 
-Lifecycle
+Lifecycle Hooks
     constructor()
     ngOnChanges(changes: SimpleChanges)
     ngOnInit()

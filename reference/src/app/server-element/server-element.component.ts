@@ -10,7 +10,9 @@ import {
   AfterContentChecked,
   AfterViewInit,
   AfterViewChecked,
-  OnDestroy
+  OnDestroy,
+  ViewChild,
+  ElementRef
 } from '@angular/core';
 
 // tslint:disable-next-line: no-conflicting-lifecycle
@@ -34,7 +36,10 @@ export class ServerElementComponent
   @Input('srvElement') element: { type: string; name: string; content: string };
   constructor() {}
 
+  @ViewChild('heading', {static:true}) header: ElementRef;
+
   ngOnInit() {
+    console.log('Text Content : ' + this.header.nativeElement.textContent);
     console.log('ngOnInit called!');
   }
 
@@ -55,6 +60,7 @@ export class ServerElementComponent
   }
 
   ngAfterViewInit() {
+    console.log('Text Content : ' + this.header.nativeElement.textContent);
     console.log('ngAfterViewInit called!');
   }
 
