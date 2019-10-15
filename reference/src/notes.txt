@@ -1,3 +1,11 @@
 Centralized using Service
 
 Provide Service, use providers
+
+Hierarchial Injector
+    AppModule paling tinggi
+    AppComponents
+        Intances don't propagate up
+    Any other component : The component and all it's child
+
+    REMOVE IT FROM PROVIDERS ARRAY
