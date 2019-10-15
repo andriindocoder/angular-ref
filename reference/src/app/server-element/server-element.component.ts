@@ -12,7 +12,8 @@ import {
   AfterViewChecked,
   OnDestroy,
   ViewChild,
-  ElementRef
+  ElementRef,
+  ContentChild
 } from '@angular/core';
 
 // tslint:disable-next-line: no-conflicting-lifecycle
@@ -37,22 +38,25 @@ export class ServerElementComponent
   constructor() {}
 
   @ViewChild('heading', {static:true}) header: ElementRef;
+  @ContentChild('contentParagraph', {static:true}) paragraph: ElementRef;
 
   ngOnInit() {
     console.log('Text Content : ' + this.header.nativeElement.textContent);
+    console.log('Paragraph Content : ' + this.paragraph.nativeElement.textContent);
     console.log('ngOnInit called!');
   }
-
+  
   ngOnChanges(changes: SimpleChanges) {
     console.log('ngOnChanges called!');
   }
-
+  
   ngDoCheck() {
     console.log('ngDoCheck called!');
   }
-
+  
   ngAfterContentInit() {
     console.log('ngAfterContentInit called!');
+    console.log('Paragraph Content : ' + this.paragraph.nativeElement.textContent);
   }
 
   ngAfterContentChecked() {
