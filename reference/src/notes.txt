@@ -15,3 +15,5 @@ Injectable() : Can be injected there : Where receiving service
 
 Simpler than Output input
 So much easier with services
+
+Emit pasangannya subscribe
