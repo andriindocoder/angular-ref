@@ -18,3 +18,7 @@ private renderer: Renderer2
 
 Why better, soalnya tentang service worker.
 this.renderer.setStyle
+
+https://angular.io/api/core/Renderer2
+
+@HostListener decorator
