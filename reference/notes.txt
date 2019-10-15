@@ -24,3 +24,6 @@ https://angular.io/api/core/Renderer2
 @HostListener decorator
 
 Simpler : using HOstBinding
+
+Tanda * adalah structural directive
+Aslinya : <ng-template [ngIf]>Bla bla</ng-template>
