@@ -9,3 +9,9 @@ Hierarchial Injector
     Any other component : The component and all it's child
 
     REMOVE IT FROM PROVIDERS ARRAY
+
+Provide Service in AppModule
+Injectable() : Can be injected there : Where receiving service
+
+Simpler than Output input
+So much easier with services
