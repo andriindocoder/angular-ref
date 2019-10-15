@@ -22,3 +22,5 @@ this.renderer.setStyle
 https://angular.io/api/core/Renderer2
 
 @HostListener decorator
+
+Simpler : using HOstBinding
