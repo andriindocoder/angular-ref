@@ -1,0 +1,6 @@
+Section 7 Directives Deep Dive Note
+
+Understanding Directives
+Attributes vs Structural Directives
+Structural Directives : Change the DOM around this element.
+Attribute : Only change properties
