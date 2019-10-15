@@ -7,3 +7,14 @@ Attribute : Only change properties
 
 Can't have two Structural Directives in one element.
 
+@Directive({
+    selector: 
+})
+
+Directly access element tidak disarankan.
+Gunakan render.
+ng g d better-highlight
+private renderer: Renderer2
+
+Why better, soalnya tentang service worker.
+this.renderer.setStyle
