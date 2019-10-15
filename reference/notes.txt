@@ -6,3 +6,4 @@ Structural Directives : Change the DOM around this element.
 Attribute : Only change properties
 
 Can't have two Structural Directives in one element.
+
