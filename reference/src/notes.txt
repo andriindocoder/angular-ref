@@ -1,0 +1,18 @@
+Section 15 Forms - Note
+
+Angular job is to retrieve the value from the form and validate it. 
+Need javascript object representation to represent value of the form.
+
+{
+    value: {
+        name: 'Me',
+        email: 'me@gmail.com'
+    },
+    valid: true 
+}
+
+Template Driven (TD) vs Reactive Approach
+TD : Angular infers the Form object from the DOM 
+Reactive : Form is created programmatically and sync with the DOM (more complex)
+
+Form gak ada action dan method. Angular should handle this.
