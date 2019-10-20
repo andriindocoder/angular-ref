@@ -16,3 +16,6 @@ TD : Angular infers the Form object from the DOM
 Reactive : Form is created programmatically and sync with the DOM (more complex)
 
 Form gak ada action dan method. Angular should handle this.
+
+Pastikan import FormsModule.
+Tambahkan ngModel di dalam <input : The control of the form 
