@@ -1,0 +1,19 @@
+Section 13 - Observables Notes
+
+What is Observables
+    Sejatinya adalah Data Source
+    Di angular, adalah object yang mengimport dari third party package rxjs
+    Observable pattern : 
+        Ada observable, ada observer. Di antaranya ada stream (timeline). Di timeline ini bisa ada multiple events yang di emit dari observable
+    Observer : Adalah kode yang kita buat, misalnya function subscribe()
+    Terdapat 3 cara untuk observable:
+        Handle Data
+        Handle Error
+        Handle Completion : Tidak selalu complete.
+    Observables biasanya untuk asynchronous task, kita tidak tahu kapan akan terjadi dan terjadi berapa lama.
+    Observables itu adalah alternatif dari promise.
+
+    Params adalah observable, this.route.params.subscribe
+
+
+
