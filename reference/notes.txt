@@ -15,5 +15,21 @@ What is Observables
 
     Params adalah observable, this.route.params.subscribe
 
+    Build a new observable from rxjs 
+    import { interval } from 'rxjs'
+    interval(1000).subscribe(
+        (count) => {
+            console.log(count);
+        }
+    )
+
+    Ada observable yang jalan terus, ada yang enggak seperti hppt request.
+    Hati hati karena observable bisa bertambah terus. Harus disimpan.
+
+    private firstObsSubscription: Subscription
+
+    ngOnDestroy(): void {
+        this.firstObsSubscription.unsubscribe();
+    }
 
 
