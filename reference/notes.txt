@@ -49,3 +49,27 @@ What is Observables
     .next() -> Emit a new value
     .error()
     .complete()
+
+    observer.error(new Error('blasblas'));
+    Error akan mengunsubscribe observable. 
+
+    .complete() akan menbhentikan observable, gak perlu unsubscribe.
+    () => complete function 
+
+    Kita akan sangat jarang membuat observable sendiri. Ada librarynya di angular.
+
+    Operators : Magic Features of rxjs 
+
+    Ditaro in between Observable dan Subscription
+
+    Pipe method(). 
+    import { map } from 'rxjs/operators'
+    customIntervalObservable.pipe(map(data: number => {
+        return 'Round ' + (data+1);
+    })).subscribe...
+
+    Understanding rxjs di academind. 
+
+    map(), filter()
+
+    Pipe dapat menerima unlimited arguments(operator yang diimport dari rxjs);
