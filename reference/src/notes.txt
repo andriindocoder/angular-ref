@@ -19,3 +19,7 @@ Form gak ada action dan method. Angular should handle this.
 
 Pastikan import FormsModule.
 Tambahkan ngModel di dalam <input : The control of the form 
+
+Best place untuk naro trigger onSubmit adalah di <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+
+form:HTMLFormElement
