@@ -48,3 +48,9 @@ this.signupForm.form.patchValue({
         username: suggestedName
     }
 })
+
+----REACTIVE FORMS-----
+Kalau mau passing string, gak perlu pake square bracket:
+    formControlName = "username"
+    Kalau mau pake square bracket: 
+    [formControlName] = "'username'"
