@@ -23,3 +23,5 @@ Tambahkan ngModel di dalam <input : The control of the form
 Best place untuk naro trigger onSubmit adalah di <form (ngSubmit)="onSubmit(f)" #f="ngForm">
 
 form:HTMLFormElement
+
+Gunakan ViewChild juga bisa.
