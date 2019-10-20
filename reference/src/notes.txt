@@ -36,3 +36,7 @@ Additionally, you might also want to enable HTML5 validation (by default, Angula
 
 Disabled button when !f.valid
 Border 1px solid red.
+
+ngModel : memberi tahu angular kalau input ini kita kontrol
+[ngModel] : control dengan default value 
+([ngModel]) : two-way binding, outputing value
