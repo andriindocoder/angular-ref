@@ -78,3 +78,9 @@ What is Observables
     Don't use eventemitter, use subject.
 
     65m
+
+    Subject lebih active dari observable 
+    Active : Can be triggered from code.
+
+    Use subject to communicate cross component through service
+
