@@ -73,3 +73,8 @@ What is Observables
     map(), filter()
 
     Pipe dapat menerima unlimited arguments(operator yang diimport dari rxjs);
+
+    import { Subject } from 'rxjs' : Pengganti event emitter 
+    Don't use eventemitter, use subject.
+
+    65m
