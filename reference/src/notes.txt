@@ -84,3 +84,5 @@ and then in the template:
 This adjustment is required due to the way TS works and Angular parses your templates (it doesn't understand TS there).
 
 Async : Gak langsung dapet jawaban. Bisa nunggu dulu.
+
+If it's observable, we can subscribe to it.
