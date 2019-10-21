@@ -82,3 +82,5 @@ and then in the template:
 *ngFor="let hobbyControl of controls; let i = index"
 
 This adjustment is required due to the way TS works and Angular parses your templates (it doesn't understand TS there).
+
+Async : Gak langsung dapet jawaban. Bisa nunggu dulu.
