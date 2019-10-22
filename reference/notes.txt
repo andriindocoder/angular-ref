@@ -1,0 +1,22 @@
+Section 18 - HTTP REQUEST
+
+Angular tidak langsung ambil data ke database.
+Karena security reason.
+Karena itu ambilnya lewat API (Rest/GraphQL);
+Ada http request dan http response.
+
+Anatomy HTTP Request.
+    URL (API Endpoint)
+    Http Verb (POST, GET, PUT) --> Untuk Restful
+    Headers(Metadata) --> {"Content-Type":"application/json"}
+    Body --> { title: "New POst" }
+
+Backend Setup using Firebase
+    firebase.google.com 
+    Add Project
+    Ng-Max
+    Database
+    Firebase adalah complete backend service
+    Pilih Realtime Database
+        Start in test mode
+        https://ng-max.firebaseio.com/
