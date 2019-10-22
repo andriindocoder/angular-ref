@@ -3,3 +3,5 @@ Section 17 - Pipes
 Pipes : Bawaan angular yang berguna untuk mengatur output. It transforms some output.
 Misalnya ingin membuat tampilan username jadi uppercase semua.
 <p>{{ username | uppercase }}</p>
+
+Parametrizing dengan menggunakan ':'
