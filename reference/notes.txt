@@ -5,3 +5,5 @@ Misalnya ingin membuat tampilan username jadi uppercase semua.
 <p>{{ username | uppercase }}</p>
 
 Parametrizing dengan menggunakan ':'
+
+angular.io/docs/ts/latest/api
