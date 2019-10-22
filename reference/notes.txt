@@ -20,3 +20,5 @@ Backend Setup using Firebase
     Pilih Realtime Database
         Start in test mode
         https://ng-max.firebaseio.com/
+
+Http Request adalah Observable, harus subscribe
