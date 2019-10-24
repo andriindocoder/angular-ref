@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
   onCreatePost(postData: Post) {
     // Send Http request
     this.http
-      .post(
+      .post<{name: string}>(
         'https://ng-max.firebaseio.com/posts.json',
         postData
       )
@@ -40,8 +40,8 @@ export class AppComponent implements OnInit {
 
   private fetchPosts() {
     this.http
-      .get('https://ng-max.firebaseio.com/posts.json')
-      .pipe(map((responseData: {[key: string] : Post}) => {
+      .get<{[key: string]: Post}>('https://ng-max.firebaseio.com/posts.json')
+      .pipe(map(responseData => {
         const postsArray: Post[] = [];
         for (const key in responseData) {
           if (responseData.hasOwnProperty(key)) {
