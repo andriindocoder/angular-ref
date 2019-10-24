@@ -34,3 +34,7 @@ GET method adalah generic method
     (Data you're getting back)
 
 Kalau ada banyak component dan big codes, gunakan service supaya rapi
+
+observe: 'response' akan mendapatkan balikan secara lengkap, defaultnya body saja.
+
+observe: 'events' 
