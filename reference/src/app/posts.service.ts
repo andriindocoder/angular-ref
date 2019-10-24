@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Post } from './post.model';
 import { map, catchError } from 'rxjs/operators';
 import { Subject, throwError } from 'rxjs';
@@ -34,7 +34,8 @@ export class PostsService {
       .get<{ [key: string]: Post }>('https://ng-max.firebaseio.com/posts.json', {
         headers: new HttpHeaders({
           'Custom-Header' : 'Hola'
-        })
+        }),
+        params: new HttpParams().set('status', 'delivered')
       })
       .pipe(
         map(responseData => {
