@@ -45,3 +45,6 @@ Interceptors
     Untuk melakukan log data.
     Untuk modifikasi request object.
     Super useful feature.
+
+Tap operator : cuma logging
+Di Interceptors bisa interaksi dengan request maupun response
