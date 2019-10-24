@@ -48,3 +48,5 @@ Interceptors
 
 Tap operator : cuma logging
 Di Interceptors bisa interaksi dengan request maupun response
+
+Order Interceptors di app module berpengaruh
