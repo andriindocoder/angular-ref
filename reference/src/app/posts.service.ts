@@ -24,7 +24,8 @@ export class PostsService {
         "https://ng-max.firebaseio.com/posts.json",
         postData,
         {
-          observe: "response"
+          observe: 'response',
+          responseType: 'json'
         }
       )
       .subscribe(
