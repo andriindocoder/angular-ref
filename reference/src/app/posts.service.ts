@@ -1,44 +1,51 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Post } from './post.model';
-import { map } from 'rxjs/operators';
-import { Subject } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
+import { Subject, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostsService {
-
-  constructor(private http: HttpClient ) { }
+  constructor(private http: HttpClient) {}
 
   error = new Subject<string>();
 
   createAndStorePost(title: string, content: string) {
-    const postData: Post = {title, content};
+    const postData: Post = { title, content };
     this.http
-      .post<{name: string}>(
+      .post<{ name: string }>(
         'https://ng-max.firebaseio.com/posts.json',
         postData
       )
-      .subscribe(responseData => {
-        console.log(responseData);
-      }, error => {
-        this.error.next(error.message);
-      });
+      .subscribe(
+        responseData => {
+          console.log(responseData);
+        },
+        error => {
+          this.error.next(error.message);
+        }
+      );
   }
 
   fetchPosts() {
     return this.http
-      .get<{[key: string]: Post}>('https://ng-max.firebaseio.com/posts.json')
-      .pipe(map(responseData => {
-        const postsArray: Post[] = [];
-        for (const key in responseData) {
-          if (responseData.hasOwnProperty(key)) {
-            postsArray.push({ ...responseData[key], id: key });
+      .get<{ [key: string]: Post }>('https://ng-max.firebaseio.com/posts.json')
+      .pipe(
+        map(responseData => {
+          const postsArray: Post[] = [];
+          for (const key in responseData) {
+            if (responseData.hasOwnProperty(key)) {
+              postsArray.push({ ...responseData[key], id: key });
+            }
           }
-        }
-        return postsArray;
-      }));
+          return postsArray;
+        }),
+        catchError(errorRes => {
+          return throwError(errorRes);
+        })
+      );
   }
 
   deletePosts() {
