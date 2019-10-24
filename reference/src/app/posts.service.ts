@@ -30,12 +30,15 @@ export class PostsService {
   }
 
   fetchPosts() {
+    let searchParams = new HttpParams();
+    searchParams = searchParams.append('print', 'pretty');
+    searchParams = searchParams.append('status', 'delivered');
     return this.http
       .get<{ [key: string]: Post }>('https://ng-max.firebaseio.com/posts.json', {
         headers: new HttpHeaders({
           'Custom-Header' : 'Hola'
         }),
-        params: new HttpParams().set('status', 'delivered')
+        params: searchParams
       })
       .pipe(
         map(responseData => {
