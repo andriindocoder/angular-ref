@@ -32,3 +32,5 @@ id?: string <-- This is a string tapi optional. Tanda ? menandakan opsional
 GET method adalah generic method 
     Bisa ditambahkan angle bracket berisi type which this response will actually return as a body once it's done.
     (Data you're getting back)
+
+Kalau ada banyak component dan big codes, gunakan service supaya rapi
