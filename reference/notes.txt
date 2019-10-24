@@ -40,3 +40,8 @@ observe: 'response' akan mendapatkan balikan secara lengkap, defaultnya body saj
 observe: 'events' 
 
 responseType: 'json/text/...'
+
+Interceptors
+    Untuk melakukan log data.
+    Untuk modifikasi request object.
+    Super useful feature.
