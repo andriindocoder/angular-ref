@@ -8,7 +8,7 @@ Ada http request dan http response.
 Anatomy HTTP Request.
     URL (API Endpoint)
     Http Verb (POST, GET, PUT) --> Untuk Restful
-    Headers(Metadata) --> {"Content-Type":"application/json"}
+    Headers(Metadata) --> {"Content-Type":"application/json"} Ada defaultnya
     Body --> { title: "New POst" }
 
 Backend Setup using Firebase
@@ -22,3 +22,9 @@ Backend Setup using Firebase
         https://ng-max.firebaseio.com/
 
 Http Request adalah Observable, harus subscribe
+Request only sent when you subscribe
+
+Kasih pipe() sebelum subscribe 
+map operator dari rxjs. 
+
+id?: string <-- This is a string tapi optional. Tanda ? menandakan opsional
