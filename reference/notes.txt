@@ -1,0 +1,19 @@
+Tutorial Basic Angular App: 
+
+https://code.tutsplus.com/tutorials/creating-your-first-angular-app-basics--cms-30092
+
+Angular dapat digunakan untuk membuat web dan mobile app.
+Angular ditulis dalam bahasa pemrograman Typescript.
+
+Aplikasi Country Information App. 
+    3 Components : 
+        HomeComponent
+        CountryDetailComponent
+        AllCountriesComponent
+
+Components adalah building blocks bagi aplikasi angular. Gunanya untuk control UI dari app. 
+Basic Component terdiri atas dua bagian : Decorator dan Class Definition.
+
+Service Class digunakan untuk menampilkan data di layar, terdiri atas fungsi fungsi untuk menerima atau memodifikasi data. 
+
+Service adalah any value, function, atau fitur yang dibutuhkan aplikasi. Semacam controller kali ya.
