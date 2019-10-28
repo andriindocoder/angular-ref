@@ -17,3 +17,7 @@ Basic Component terdiri atas dua bagian : Decorator dan Class Definition.
 Service Class digunakan untuk menampilkan data di layar, terdiri atas fungsi fungsi untuk menerima atau memodifikasi data. 
 
 Service adalah any value, function, atau fitur yang dibutuhkan aplikasi. Semacam controller kali ya.
+
+Kita menggunakan Injectable dari Angular core untuk membuat CountryClass available for the Injector untuk di inject ke component lainnya. 
+
+Different modules will need to communicate with each other. 
