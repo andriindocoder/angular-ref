@@ -23,7 +23,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
-      { path: 'products/:id', component: ProductDetailsComponent }
+      { path: 'products/:productId', component: ProductDetailsComponent }
     ]),
     BrowserAnimationsModule
   ],
