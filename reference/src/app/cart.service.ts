@@ -10,7 +10,7 @@ export class CartService {
     this.items.push(product);
   }
 
-  getCart() {
+  getItems() {
     return this.items;
   }
 
