@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./employee-list.component.css']
 })
 export class EmployeeListComponent implements OnInit {
-  employees: Observable<Employee[]>;
+  employees: Employee[];
 
   constructor(
     private employeeService: EmployeeService,
@@ -24,7 +24,10 @@ export class EmployeeListComponent implements OnInit {
 
   reloadData(): void {
     this.employeeService.getEmployees()
-      .subscribe(employees => (this.employees = employees));
+      .subscribe((response) => {
+        console.log(response);
+        this.employees = response;
+      });
   }
 
 }

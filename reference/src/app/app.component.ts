@@ -8,7 +8,7 @@ declare var $;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'reference';
+  title = 'Angular 8 Crud';
 
   ngOnInit() {
 
