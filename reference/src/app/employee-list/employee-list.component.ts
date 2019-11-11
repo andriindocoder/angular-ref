@@ -30,7 +30,7 @@ export class EmployeeListComponent implements OnInit {
       });
   }
 
-  employeeDetails(id: number){
+  employeeDetails(id: number) {
     this.router.navigate(['details', id]);
   }
 
@@ -44,7 +44,7 @@ export class EmployeeListComponent implements OnInit {
         error => console.log(error));
   }
 
-  updateEmployee(id: number){
+  updateEmployee(id: number) {
     this.router.navigate(['update', id]);
   }
 
