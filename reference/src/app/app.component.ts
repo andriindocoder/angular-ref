@@ -11,8 +11,6 @@ export class AppComponent implements OnInit {
   title = 'reference';
 
   ngOnInit() {
-    $(document).ready(() => {
-      alert('testing');
-    });
+
   }
 }
