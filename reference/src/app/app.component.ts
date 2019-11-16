@@ -43,6 +43,6 @@ export class AppComponent implements OnInit {
           confirmButtonText: 'Lovely!'
         })
       }
-    })
+    });
   }
 }
