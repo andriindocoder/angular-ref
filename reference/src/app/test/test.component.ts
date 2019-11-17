@@ -4,28 +4,24 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-test',
   template: `
     <h2>Hello {{ name }}</h2>
-    <h2 [style.color]="hasError ? 'red' : 'green'">Indocoder</h2>
-    <h2 [style.color]="highlightColor">Indocoder</h2>
-    <h2 [ngStyle]="titleStyles">Indocoder</h2>
+    <button (click)="onClick($event)">Greet</button>
+    <button (click)="greeting = 'Welkommen!'">Greeting</button>
+    {{ greeting }}
   `,
   styles: []
 })
 export class TestComponent implements OnInit {
   public name = 'Indocoder';
-  public hasError = true;
-  public highlightColor = 'orange';
-  public titleStyles = {
-    color: 'blue',
-    fontStyle: 'italic'
-  };
+  public greeting = '';
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  greetUser() {
-    return 'Hello ' + this.name;
+  onClick(event) {
+    console.log(event);
+    this.greeting = event.type;
   }
 
 }
