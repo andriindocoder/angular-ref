@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 declare var $;
 
 @Component({
@@ -8,7 +9,9 @@ declare var $;
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
     document.body.className = 'hold-transition login-page';
@@ -19,7 +22,10 @@ export class LoginComponent implements OnInit {
         increaseArea: '20%' /* optional */
       });
     });
+  }
 
+  login() {
+    this.router.navigate(['dashboard']);
   }
 
 }
