@@ -13,22 +13,22 @@ export class EmployeeService {
   ) { }
 
   getEmployees(): Observable<Employee[]> {
-    return this.http.get<Employee[]>('api/employees');
+    return this.http.get<Employee[]>('http://server.asia-note.com/api/employees');
   }
 
   createEmployee(employee: Employee): Observable<Employee> {
-    return this.http.post<Employee>('api/employee', employee);
+    return this.http.post<Employee>('http://server.asia-note.com/api/employee', employee);
   }
 
   getEmployee(id: number): Observable<any> {
-    return this.http.get(`api/employee/${id}`);
+    return this.http.get(`http://server.asia-note.com/api/employee/${id}`);
   }
 
   updateEmployee(id: number, value: any): Observable<object> {
-    return this.http.put(`api/employee/${id}`, value);
+    return this.http.put(`http://server.asia-note.com/api/employee/${id}`, value);
   }
 
   deleteEmployee(id: number): Observable<any> {
-    return this.http.delete(`api/employee/${id}`, { responseType: 'text' });
+    return this.http.delete(`http://server.asia-note.com/api/employee/${id}`, { responseType: 'text' });
   }
 }

@@ -1,6 +1,6 @@
 {
 	"/api/*": {
-		"target" : "http://localhost:4444/api",
+		"target" : "http://server.asia-note.com/api",
 		"secure" : false,
 		"logLevel" : "debug",
 		"changeOrigin" : true,

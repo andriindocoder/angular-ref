@@ -27,6 +27,8 @@ export class EmployeeListComponent implements OnInit {
       .subscribe((response) => {
         console.log(response);
         this.employees = response;
+      }, (err) => {
+        console.log(err);
       });
   }
 
