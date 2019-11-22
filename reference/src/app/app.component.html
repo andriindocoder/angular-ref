@@ -1,8 +1,12 @@
 <div style="text-align: center;">
-  <h2>
-    {{ message }}
-  </h2>
+  <h1>
+    Routing and Navigation
+  </h1>
 </div>
 
-<employee-list></employee-list>
-<employee-detail></employee-detail>
+<nav>
+  <a [routerLink]="['/departments']" routerLinkActive="active" >Departments</a> |
+  <a [routerLink]="['/employees']" routerLinkActive="active" >Employees</a>
+</nav>
+
+<router-outlet></router-outlet>
