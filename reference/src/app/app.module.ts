@@ -9,6 +9,10 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CreateArticleComponent } from './create-article/create-article.component';
+import { ArticleDetailsComponent } from './article-details/article-details.component';
+import { ArticleListComponent } from './article-list/article-list.component';
+import { UpdateArticleComponent } from './update-article/update-article.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { HttpClientModule } from '@angular/common/http';
     CreateEmployeeComponent,
     EmployeeListComponent,
     EmployeeDetailsComponent,
-    UpdateEmployeeComponent
+    UpdateEmployeeComponent,
+    CreateArticleComponent,
+    ArticleDetailsComponent,
+    ArticleListComponent,
+    UpdateArticleComponent
   ],
   imports: [
     BrowserModule,

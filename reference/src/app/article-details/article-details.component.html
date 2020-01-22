@@ -1,0 +1,17 @@
+<h2>{{ article.title }}</h2>
+
+<hr />
+<div *ngIf="article">
+  <div>
+    <label><b>Content: </b></label>
+    <div [innerHTML]="article.content"></div>
+  </div>
+  <div>
+    <label><b>Meta Title: </b></label> {{ article.meta_title }}
+  </div>
+</div>
+
+<br />
+<br />
+<button (click)="list()" class="btn btn-primary">Back to Article List</button
+><br />

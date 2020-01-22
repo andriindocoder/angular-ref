@@ -1,0 +1,50 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-md-8">
+        <h2>Article List</h2>
+      </div>
+    </div>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Title Tag</th>
+          <th>Meta Description</th>
+          <th>Meta Keywords</th>
+          <th>Robot Meta Tag</th>
+          <th class="text-center" width="25%">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let article of articles">
+          <td>{{ article.title }}</td>
+          <td>{{ article.meta_title }}</td>
+          <td>{{ article.meta_description }}</td>
+          <td>{{ article.meta_keywords }}</td>
+          <td>{{ article.robot_meta_tag }}</td>
+          <td class="text-center">
+            <button
+              (click)="updateArticle(article.articleid)"
+              class="btn btn-primary"
+              style="margin-left: 10px"
+              title="Update"
+            >
+              <i class="fa fa-edit"></i> Update
+            </button>
+            <button
+              (click)="articleDetails(article.articleid)"
+              class="btn btn-info"
+              style="margin-left: 10px"
+              title="Details"
+            >
+              <i class="fa fa-info-circle"></i> Details
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

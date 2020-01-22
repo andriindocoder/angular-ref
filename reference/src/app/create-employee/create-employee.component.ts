@@ -15,10 +15,9 @@ export class CreateEmployeeComponent implements OnInit {
   constructor(
     private employeeService: EmployeeService,
     private router: Router
-  ) { }
+  ) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   newEmployee(): void {
     this.submitted = false;
@@ -26,8 +25,10 @@ export class CreateEmployeeComponent implements OnInit {
   }
 
   save() {
-    this.employeeService.createEmployee(this.employee)
-      .subscribe(data => console.log(data), error => console.log(error));
+    this.employeeService.createEmployee(this.employee).subscribe(
+      data => console.log(data),
+      error => console.log(error)
+    );
     this.employee = new Employee();
     this.gotoList();
   }
@@ -40,5 +41,4 @@ export class CreateEmployeeComponent implements OnInit {
   gotoList() {
     this.router.navigate(['/employees']);
   }
-
 }
