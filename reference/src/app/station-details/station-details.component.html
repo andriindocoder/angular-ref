@@ -1,0 +1,18 @@
+<h2>Station Detail</h2>
+
+<hr/>
+<div *ngIf="station">
+  <div>
+    <label><b>Name: </b></label> {{station.name}}
+  </div>
+  <div>
+    <label><b>Code: </b></label> {{station.code}}
+  </div>
+  <div>
+    <label><b>Remark: </b></label> {{station.remark}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Station List</button><br>

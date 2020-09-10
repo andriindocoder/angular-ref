@@ -1,0 +1,37 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-md-8">
+            <h2>Station List</h2>
+        </div>
+        <div class="col-md-4 text-right">
+          <span><a class="btn btn-success" href routerLink="../add-station" routerLinkActive="active"><i class="fa fa-plus"></i> Add Station</a></span>
+        </div>
+      </div>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Code</th>
+            <th class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let station of stations">
+            <td>{{station.id}}</td>
+            <td>{{station.name}}</td>
+            <td>{{station.code}}</td>
+            <td class="text-center">
+                <button (click)="deleteStation(station.id)" class="btn btn-danger"><i class="fa fa-birthday-cake"></i> Delete</button>
+                <button (click)="updateStation(station.id)" class="btn btn-primary" style="margin-left: 10px"><i class="fa fa-edit"></i> Update</button>
+                <button (click)="stationDetails(station.id)" class="btn btn-info" style="margin-left: 10px"><i class="fa fa-info-circle"></i> Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
