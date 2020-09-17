@@ -21,4 +21,8 @@ export class EmployeeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onClear() {
+    this.service.form.reset();
+    this.service.initializeFormGroup();
+  }
 }
