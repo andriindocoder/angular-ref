@@ -12,7 +12,7 @@ export class EmployeeComponent implements OnInit {
 
   constructor(
     public service: EmployeeService,
-    private departmentService: DepartmentService,
+    public departmentService: DepartmentService,
     private notificationService: NotificationService
   ) { }
 

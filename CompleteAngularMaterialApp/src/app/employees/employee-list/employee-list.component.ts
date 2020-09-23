@@ -10,7 +10,7 @@ import { MatTableDataSource } from '@angular/material/table';
 export class EmployeeListComponent implements OnInit {
   array = [];
   constructor(
-    private employeeService: EmployeeService
+    public employeeService: EmployeeService
   ) { }
 
   listData: MatTableDataSource<any>;
