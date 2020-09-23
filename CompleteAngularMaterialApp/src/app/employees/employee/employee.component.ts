@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DepartmentService } from 'src/app/shared/department.service';
 import { EmployeeService } from 'src/app/shared/employee.service';
 
 @Component({
@@ -9,14 +10,9 @@ import { EmployeeService } from 'src/app/shared/employee.service';
 export class EmployeeComponent implements OnInit {
 
   constructor(
-    public service: EmployeeService
+    public service: EmployeeService,
+    private departmentService: DepartmentService
   ) { }
-
-  departments = [
-    { id: 1, value: 'Dep 1' },
-    { id: 2, value: 'Dep 2' },
-    { id: 3, value: 'Dep 3' },
-  ];
 
   ngOnInit(): void {
     this.service.getEmployees();
