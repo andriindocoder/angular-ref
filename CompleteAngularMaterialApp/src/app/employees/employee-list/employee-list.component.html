@@ -1,3 +1,14 @@
+<div class="search-div">
+    <button mat-raised-button>
+        <mat-icon>add</mat-icon>Create 
+    </button>
+    <mat-form-field class="search-form-field" floatLabel="never">
+        <input matInput [(ngModel)]="searchKey" placeholder="Search" autocomplete="off" (keyup)="applyFilter()">
+        <button mat-button matSuffix mat-icon-button aria-label="Clear" *ngIf="searchKey" (click)="onSearchClear()">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+</div>
 <div class="mat-elevation-z8">
     <mat-table [dataSource]="listData" matSort>
         <ng-container matColumnDef="fullName">
@@ -38,5 +49,5 @@
         <mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':listData!=null}"></mat-footer-row>
         <mat-footer-row *matFooterRowDef="['noData']" [ngClass]="{'hide':!(listData!=null && listData.data.length==0)}"></mat-footer-row>
     </mat-table>
-    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="5"></mat-paginator>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="5" showFirstLastButtons></mat-paginator>
 </div>
