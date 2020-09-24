@@ -6,6 +6,9 @@ import { MatPaginator } from '@angular/material/paginator';
 import { DepartmentService } from 'src/app/shared/department.service';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { EmployeeComponent } from '../employee/employee.component';
+import { NotificationService } from 'src/app/shared/notification.service';
+import { DialogService } from 'src/app/shared/dialog.service';
+import { MatConfirmDialogComponent } from 'src/app/mat-confirm-dialog/mat-confirm-dialog.component';
 
 @Component({
   selector: 'app-employee-list',
@@ -17,7 +20,9 @@ export class EmployeeListComponent implements OnInit {
   constructor(
     public employeeService: EmployeeService,
     private departmentService: DepartmentService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private notificationService: NotificationService,
+    private dialogService: DialogService
   ) { }
 
   listData: MatTableDataSource<any>;
@@ -73,6 +78,20 @@ export class EmployeeListComponent implements OnInit {
     dialogConfig.autoFocus = true;
     dialogConfig.width = '100%';
     this.dialog.open(EmployeeComponent, dialogConfig);
+  }
+
+  onDelete($key) {
+    // if(confirm('Are you sure to delte this record?')){
+    //   this.employeeService.deleteEmployee($key);
+    //   this.notificationService.warn('! Deleted Successfully.');
+    // }
+    this.dialogService.openConfirmDialog('Are you sure to delete this record ?')
+      .afterClosed().subscribe(res => {
+        if(res){
+          this.employeeService.deleteEmployee($key);
+          this.notificationService.warn('! Deleted Successfully.');
+        }
+      });
   }
 
 }
