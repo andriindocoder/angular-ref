@@ -60,11 +60,19 @@ export class EmployeeListComponent implements OnInit {
   onCreate() {
     this.employeeService.initializeFormGroup();
     const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
+    dialogConfig.disableClose = false;
     dialogConfig.autoFocus = true;
-    this.dialog.open(EmployeeComponent, {
-      width: "100%"
-    });
+    dialogConfig.width = '68%';
+    this.dialog.open(EmployeeComponent, dialogConfig);
+  }
+
+  onEdit(row) {
+    this.employeeService.populateForm(row);
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = '100%';
+    this.dialog.open(EmployeeComponent, dialogConfig);
   }
 
 }
