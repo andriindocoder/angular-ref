@@ -23,7 +23,7 @@ export class EmployeeListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   searchKey: string;
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.employeeService.getEmployees().subscribe(
       list => {
         let array = list.map(item => {
@@ -34,11 +34,15 @@ export class EmployeeListComponent implements OnInit {
             ...item.payload.val()
           };
         });
-      this.listData = new MatTableDataSource(array);
-      this.listData.sort = this.sort;
-      this.listData.paginator = this.paginator;
-      }
-    );
+        this.listData = new MatTableDataSource(array);
+        this.listData.sort = this.sort;
+        this.listData.paginator = this.paginator;
+        this.listData.filterPredicate = (data, filter) => {
+          return this.displayedColumns.some(ele => {
+            return ele != 'actions' && data[ele].toLowerCase().indexOf(filter) != -1;
+          });
+        };
+      });
   }
 
   onSearchClear() {

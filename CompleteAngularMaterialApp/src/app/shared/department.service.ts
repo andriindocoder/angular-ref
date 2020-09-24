@@ -18,16 +18,19 @@ export class DepartmentService {
           return {
             $key: item.key,
             ...item.payload.val()
-          }
+          };
         });
       });
   }
 
   getDepartmentName($key) {
     if ($key == "0")
-    return "";
+      return "";
     else{
-      return _.find(this.array, (obj) => {return obj.$key == $key; })['name'];
+      // let result = this.array.filter(dept => dept.$key == $key);
+      // console.log(result[0]['name']);
+      // return result[0]['name'];
+      return _.find(this.array, (obj) => { return obj.$key == $key; })['name'];
     }
   }
 }
