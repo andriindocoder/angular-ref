@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 import { DepartmentService } from 'src/app/shared/department.service';
 import { EmployeeService } from 'src/app/shared/employee.service';
 import { NotificationService } from 'src/app/shared/notification.service';
@@ -13,7 +14,8 @@ export class EmployeeComponent implements OnInit {
   constructor(
     public service: EmployeeService,
     public departmentService: DepartmentService,
-    private notificationService: NotificationService
+    private notificationService: NotificationService,
+    public dialogRef: MatDialogRef<EmployeeComponent>
   ) { }
 
   ngOnInit(): void {
@@ -31,6 +33,13 @@ export class EmployeeComponent implements OnInit {
       this.service.form.reset();
       this.service.initializeFormGroup();
       this.notificationService.success(':: Submitted Successfully');
+      this.onClose();
     }
+  }
+
+  onClose() {
+    this.service.form.reset();
+    this.service.initializeFormGroup();
+    this.dialogRef.close();
   }
 }
